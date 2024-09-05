@@ -1,0 +1,5 @@
+---
+exclude: [flake.nix, flake.lock, README.md, .OLD*]
+
+plugins:
+  - jekyll-redirect-from
