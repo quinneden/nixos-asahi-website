@@ -1,2 +1,2 @@
 ---
-exclude: [flake.nix, flake.lock, README.md, .OLD*]
+exclude: [flake.nix, flake.lock, README.md, fonts]
