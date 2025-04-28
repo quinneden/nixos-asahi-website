@@ -1,10 +1,10 @@
 {
-  description = "Personal website for Chris Portela";
+  description = "Static website for nixos-asahi-package built with Hugo and Nix";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-    risotto = {
-      url = "github:joeroe/risotto?ref=v0.4.0";
+    nightfall = {
+      url = "github:LordMathis/hugo-theme-nightfall";
       flake = false;
     };
   };
@@ -23,21 +23,22 @@
       packages = forEachSystem (
         { pkgs }:
         rec {
-          default = qedenDotDev;
-          qedenDotDev = pkgs.stdenv.mkDerivation {
-            name = "qeden-dot-dev";
+          default = nixos-asahi-website;
+          nixos-asahi-website = pkgs.stdenv.mkDerivation {
+            name = "nixos-asahi-website";
+            version = "0.1.0";
             src = builtins.filterSource (
               path: type: !(type == "directory" && (baseNameOf path == "themes" || baseNameOf path == "public"))
             ) ./.;
 
             nativeBuildInputs = with pkgs; [
+              dart-sass
               hugo
-              prettier
             ];
 
             buildPhase = ''
               mkdir -p themes
-              ln -s ${inputs.risotto} themes/risotto
+              ln -s ${inputs.nightfall} themes/nightfall
               hugo --gc --minify
               prettier -w public '!**/*.{js,css}'
             '';
@@ -53,8 +54,11 @@
         { pkgs }:
         {
           default = pkgs.mkShell {
-            name = "qeden.dev";
-            buildInputs = [ pkgs.hugo ];
+            name = "nixos-asahi-website";
+            buildInputs = with pkgs; [
+              dart-sass
+              hugo
+            ];
           };
         }
       );

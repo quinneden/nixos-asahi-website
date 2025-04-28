@@ -1,0 +1,14 @@
+[
+  {
+    "label": "Start Hugo Server",
+    "command": "nix develop --command",
+    "args": ["hugo", "server", "--openBrowser", "--renderToMemory"],
+    "env": { "HUGO_ENVIRONMENT": "development" },
+    "use_new_terminal": true,
+    "allow_concurrent_runs": false,
+    "reveal": "never",
+    "reveal_target": "dock",
+    "hide": "never",
+    "shell": "system"
+  }
+]

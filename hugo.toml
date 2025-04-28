@@ -1,0 +1,34 @@
+baseURL = 'https://nixos-asahi.qeden.dev/'
+languageCode = 'en-us'
+theme = "nightfall"
+
+[markup]
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe = true
+
+[menu]
+[[menu.header]]
+name = "blog"
+weight = 0
+url = "blog"
+[[menu.header]]
+name = "about"
+weight = 1
+url = "about"
+
+[params]
+user = "nixos-asahi"
+hostname = "qeden.dev"
+[params.author]
+name = "Quinn Edenfield"  # Website and RSS feed author
+email = "quinn@qeden.dev" # RSS feed email address
+
+published = true # Show published data on post page
+
+[[params.social]]
+key = 0
+name = "github"
+url = "https://github.com/quinneden/nixos-asahi-package"
+target = "_blank"
+aria = "GitHub Repository"
