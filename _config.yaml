@@ -1,2 +1,0 @@
----
-exclude: [flake.nix, flake.lock, README.md, fonts]
