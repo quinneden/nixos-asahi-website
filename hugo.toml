@@ -1,5 +1,6 @@
 baseURL = 'https://nixos-asahi.qeden.dev/'
 languageCode = 'en-us'
+title = "NixOS Asahi"
 theme = "nightfall"
 
 [markup]
@@ -21,10 +22,10 @@ url = "about"
 user = "nixos-asahi"
 hostname = "qeden.dev"
 [params.author]
-name = "Quinn Edenfield"  # Website and RSS feed author
-email = "quinn@qeden.dev" # RSS feed email address
+name = "Quinn Edenfield"
+email = "quinn@qeden.dev"
 
-published = true # Show published data on post page
+published = true
 
 [[params.social]]
 key = 0
