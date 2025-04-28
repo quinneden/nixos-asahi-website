@@ -1,0 +1,172 @@
+// -------------- THEME SWITCHER -------------- //
+@mixin dark-appearance {
+  filter: invert(1);
+  img {
+    filter: invert(1);
+
+    &.ioda {
+      filter: invert(0);
+    }
+  }
+  .emoji {
+    filter: invert(1);
+  }
+  iframe {
+    filter: invert(1);
+  }
+}
+
+body[a="dark"] {
+  @include dark-appearance;
+}
+
+@media (prefers-color-scheme: dark) {
+  body[a="auto"] {
+    @include dark-appearance;
+  }
+}
+// -------------------------------------------- //
+
+// bg color is also needed in html in order to
+// block body's background propagation
+// see: https://stackoverflow.com/a/61265706
+html,
+body {
+  background: #1c1d1c;
+}
+
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #e0e0e0;
+  font-family: monospace;
+  font-size: 16px;
+  line-height: 1.4;
+  margin: 0;
+  min-height: 100%;
+  overflow-wrap: break-word;
+}
+
+a {
+  color: #f5cc45;
+  text-decoration: none;
+
+  &:visited {
+    color: #d6820d;
+  }
+
+  &:hover {
+    color: #75ccfa;
+    text-decoration: none;
+  }
+
+  &:active {
+    color: #ff6b6b; // Color when clicking
+  }
+}
+
+.post-meta {
+  text-align: right;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 3rem;
+}
+
+hr {
+  margin: 2rem 0;
+}
+
+p {
+  margin: 1rem 0;
+}
+
+li {
+  margin: 0.4rem 0;
+}
+
+*:target {
+  background: yellow;
+}
+
+.w {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+hr {
+  text-align: center;
+  border: 0;
+
+  &:before {
+    content: "/////";
+  }
+  &:after {
+    content: attr(data-content) "/////";
+  }
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-radius: 6px;
+  border-spacing: 0.2rem;
+  overflow: hidden;
+}
+
+table,
+th,
+td {
+  border: thin solid #333;
+  padding: 0.4rem;
+}
+
+// Optional: Add some subtle styling
+th {
+  background-color: #252625;
+}
+
+code {
+  color: #e0e0e0;
+  background: #171817;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+  border-radius: 3px;
+  width: 100%;
+}
+
+div.highlighter-rouge code {
+  display: block;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  padding: 0.8rem;
+  border-radius: 6px;
+}
+
+blockquote {
+  color: #777;
+  font-style: italic;
+  border: thin solid #333;
+  border-radius: 6px;
+  padding: 0.8rem;
+
+  p {
+    margin: 0;
+  }
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}

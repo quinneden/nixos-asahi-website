@@ -1,2 +1,23 @@
----
-exclude: [flake.nix, flake.lock, README.md, fonts]
+title: NixOS Asahi Installer
+email: quinn@qeden.dev
+description: NixOS installer for Apple Silicon Macs.
+url: "https://nixos-asahi.qeden.dev"
+github_username: quinneden
+
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+
+theme: no-style-please
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+exclude:
+  - flake.lock
+  - flake.nix
+  - gemset.nix
+  - package.nix
+  - README.md

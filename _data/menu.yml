@@ -1,0 +1,27 @@
+entries:
+  - title: A NixOS installer for Apple Silicon Macs.
+  - title: info
+    entries:
+      - title: This project is a work in progress. Code is subject to changes. Contributions and issues are appreciated.
+      - title: installation & building
+        url: /install
+      - title: source (github)
+        url: https://github.com/quinneden/nixos-asahi-package
+
+  - title: credits
+    entries:
+      - title: tpwrules/nixos-apple-silicon (github)
+        url: https://github.com/tpwrules/nixos-apple-silicon
+        entries:
+          - title: Nix derivations and a NixOS module allowing bare-metal installation of NixOS Apple Silicon Macs.
+      - title: Asahi Linux
+        url: https://asahilinux.org
+        entries:
+          - title: The bootloader, kernel patches, u-boot port, and GPU driver that enable Linux on Apple Silicon.
+          - title: The installer and original bootstrap scripts.
+  # - title: posts
+  #   post_list:
+  #     limit: 5
+  #     show_more: false
+  #     show_more_text: See archive...
+  #     show_more_url: archive.html
