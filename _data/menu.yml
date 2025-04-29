@@ -4,7 +4,7 @@ entries:
     entries:
       - title: This project is a work in progress. Code is subject to changes. Contributions and issues are appreciated.
       - title: installation & building
-        url: /install
+        url: /instructions
       - title: source (github)
         url: https://github.com/quinneden/nixos-asahi-package
 
@@ -17,11 +17,5 @@ entries:
       - title: Asahi Linux
         url: https://asahilinux.org
         entries:
-          - title: The bootloader, kernel patches, u-boot port, and GPU driver that enable Linux on Apple Silicon.
+          - title: The bootloader, kernel patches, u-boot port, and GPU driver that enables Linux on Apple Silicon.
           - title: The installer and original bootstrap scripts.
-  # - title: posts
-  #   post_list:
-  #     limit: 5
-  #     show_more: false
-  #     show_more_text: See archive...
-  #     show_more_url: archive.html

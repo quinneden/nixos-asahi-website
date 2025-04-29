@@ -1,0 +1,73 @@
+// Use ```<lang>{:.nowrap} for explicit text wrapping in code blocks
+
+.highlighter-rouge,
+.highlight,
+figure.highlight,
+div.highlight,
+pre.highlight,
+.highlighter-rouge pre,
+.highlighter-rouge code,
+.highlight pre,
+.highlight code {
+  max-width: 100% !important;
+  overflow-wrap: break-word !important;
+  word-wrap: break-word !important;
+  white-space: pre-wrap !important;
+  overflow-x: visible !important; // Prevent horizontal scrollbar
+}
+
+// Only apply scrollbar when appropriate
+pre {
+  overflow-x: visible !important; // Default to no scrollbar
+
+  // Only apply scrollbar for very long lines that can't be wrapped
+  &.nowrap {
+    overflow-x: auto !important;
+    white-space: pre !important;
+  }
+}
+
+// Ensure inline code doesn't cause layout issues
+p code,
+li code,
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code {
+  white-space: normal !important;
+  word-break: break-word !important;
+}
+
+// Make sure pre and code tags don't exceed their containers
+pre,
+code {
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+// Style wrapper for code blocks
+.highlighter-rouge {
+  border-radius: 6px !important;
+  margin-bottom: 1rem !important;
+  background: #171817 !important;
+
+  div.highlight {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #171817 !important;
+  }
+
+  pre {
+    margin: 0 !important;
+    padding: 0.8rem !important;
+    border-radius: 6px !important;
+    background: transparent !important;
+  }
+
+  code {
+    background: transparent !important;
+    padding: 0 !important;
+  }
+}

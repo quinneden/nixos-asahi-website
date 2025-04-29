@@ -1,7 +1,8 @@
 title: NixOS Asahi Installer
-email: quinn@qeden.dev
 description: NixOS installer for Apple Silicon Macs.
 url: "https://nixos-asahi.qeden.dev"
+author: Quinn Edenfield
+email: quinn@qeden.dev
 github_username: quinneden
 
 markdown: kramdown
@@ -9,7 +10,8 @@ highlighter: rouge
 kramdown:
   input: GFM
 
-theme: no-style-please
+favicon: assets/icons/favicon.svg
+logo: assets/images/logo/nixos-asahi-logo-gray.svg
 
 plugins:
   - jekyll-feed
